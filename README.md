@@ -58,7 +58,7 @@ Every model must has `$fillable` or `$guarded` property for mass assignment.
 In every Model where there is an embedded model you should define
 `protected $embedMany = [];` or/and `protected $embedOne = [];` where key is name of attribute and value is Model class name.
 
-In embedOne relation, the attribute will be cast to the Model when the Model is received from the database or.
+In embedOne relation, the attribute will be cast to the Model when the Model is received from the database.
 In embedMany relation, the attribute will be cast to the Laravel Collection of Models.
 When Model is saving to database, Models is converting to array of attributes.
 
@@ -69,6 +69,8 @@ public function __construct($attributes = []) {
     $this->setEmbeddedAttributes();
 }
 ```
+
+To save embedded models, just save base model. All actions are making through base model.
 
 
 Example of code:
