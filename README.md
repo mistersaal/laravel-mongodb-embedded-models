@@ -64,7 +64,7 @@ When Model is saving to database, Models is converting to array of attributes.
 
 In every Model where there is an embedded model, you should define constructor method:
 ```php
-public function __construct($attributes) {
+public function __construct($attributes = []) {
     parent::__construct($attributes);
     $this->setEmbeddedAttributes();
 }
@@ -86,7 +86,7 @@ class User extends Model implements HasEmbeddedModelsInterface
     protected $connection = 'mongodb';
     protected $guarded = [];
 
-    public function __construct($attributes) {
+    public function __construct($attributes = []) {
         parent::__construct($attributes);
         $this->setEmbeddedAttributes();
     }
@@ -107,7 +107,7 @@ class Album extends Model implements HasEmbeddedModelsInterface
     protected $connection = 'mongodb';
     protected $guarded = [];
 
-    public function __construct($attributes) {
+    public function __construct($attributes = []) {
         parent::__construct($attributes);
         $this->setEmbeddedAttributes();
     }
