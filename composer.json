@@ -1,0 +1,35 @@
+{
+    "name": "mistersaal/laravel-mongodb-embedded-models",
+    "description": "A more productive and simpler solution for embedding models in mongodb models than custom casts in Laravel.",
+    "keywords": [
+        "laravel",
+        "eloquent",
+        "mongodb",
+        "mongo",
+        "database",
+        "model",
+        "moloquent",
+        "embed",
+        "embedOne",
+        "embedMany",
+        "jenssegers",
+        "cast"
+    ],
+    "homepage": "https://github.com/mistersaal/laravel-mongodb-embedded-models",
+    "type": "library",
+    "require": {
+        "jenssegers/mongodb": "dev-develop"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Saal Stepan",
+            "email": "mister.saal@yandex.ru"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Mistersaal\\Mongodb\\Embed": "src/"
+        }
+    }
+}
