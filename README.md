@@ -1,4 +1,4 @@
-#Laravel Mongodb embedded models
+# Laravel Mongodb embedded models
 
 A more **productive** and simpler solution for embedding models in mongodb models than custom casts in Laravel.
 This package is extension for **jenssegers/mongodb** package.
@@ -41,7 +41,7 @@ I may then post more detailed test results, but believe me,
 when there are a lot of calls to the model,
 custom casts load the system very much.
 
-##Installation
+## Installation
 Make sure you have the [*jenssegers/mongodb develop*](https://github.com/jenssegers/laravel-mongodb/tree/develop) installed.
 
 Install the package via Composer:
@@ -49,7 +49,7 @@ Install the package via Composer:
 composer require mistersaal/laravel-mongodb-embedded-models
 ```
 
-##Usage
+## Usage
 Your every Model where there is an embedded model should `implements Mistersaal\Mongodb\Embed\HasEmbeddedModelsInterface`
 and `use Mistersaal\Mongodb\Embed\HasEmbeddedModels` trait.
 
