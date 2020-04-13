@@ -8,25 +8,26 @@ for Laravel 7 removed embedding relations.
 Instead of relations, it is proposed to use custom casts of Laravel.
 But custom casts is really bad for performance ([read more](https://github.com/laravel/framework/issues/31778))
 when we have multi-level embedding, for example:
+User:
 ```json
-User: {
-  name: "Stepan",
-  email: "myemail@gmail.com",
-  facebookAccount: {
-    accessToken: '',
-    id: 123
+{
+  "name": "Stepan",
+  "email": "myemail@gmail.com",
+  "facebookAccount": {
+    "accessToken": "",
+    "id": 123
   },
-  albums: [
+  "albums": [
     {
-      name: "My photos",
-      photos: [
+      "name": "My photos",
+      "photos": [
         {
-          path: "./me.jpg",
-          description: "Just a photo"
+          "path": "./me.jpg",
+          "description": "Just a photo"
         },
         {
-          path: "./qwerty.jpg",
-          description: "Another photo"
+          "path": "./qwerty.jpg",
+          "description": "Another photo"
         }
       ]
     }
